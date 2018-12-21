@@ -1057,7 +1057,7 @@ public class AddAll {
         Iterator itr = range.iterator();
         while (itr.hasNext()) {
           int x = (Integer)itr.next();
-          if(x==5 | x==15 | x==25)itr.remove();
+          if(x%2!=0 & x%5==0)itr.remove();
         }
       }
       return range.size();
