@@ -3,6 +3,7 @@ package edu.cnm.deepdive;
 
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -1053,10 +1054,10 @@ public class AddAll {
       ArrayList<Integer> range = new ArrayList<>(end-start+1);
       for (int i = start; i <= end; i++) {
         range.add(i);
-        if (i==5 || i==15 || i==25 || i==35) {
-          range.remove(i-1);
-          range.add(i);
-          return range.size();
+        Iterator itr = range.iterator();
+        while (itr.hasNext()) {
+          int x = (Integer)itr.next();
+          if(x==5 | x==15 | x==25)itr.remove();
         }
       }
       return range.size();
