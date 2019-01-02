@@ -19,4 +19,16 @@ class AddAllTest {
     assertEquals(68, AddAll.getSum(5, 12));
     assertEquals(-1, AddAll.getSum(0, -1));
   }
+
+  @Test
+  void testSolution() {
+      assertEquals("############5616", AddAll.maskify("4556364607935616"));
+      assertEquals("#######5616",      AddAll.maskify(     "64607935616"));
+      assertEquals("1",                AddAll.maskify(               "1"));
+      assertEquals("",                 AddAll.maskify(                ""));
+
+      // "What was the name of your first pet?"
+      assertEquals("##ippy",                                    AddAll.maskify("Skippy")                                  );
+      assertEquals("####################################man!",  AddAll.maskify("Nananananananananananananananana Batman!"));
+    }
 }

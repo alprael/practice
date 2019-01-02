@@ -1081,6 +1081,15 @@ public class AddAll {
     }
   }
 
+  public static String maskify(String str) {
+    if (str.isEmpty()) {
+      return "";
+    } else {
+      String str2 = str.substring(0, str.length()-4);
+      String str3 = str.replace(str2, "#");
+      return str3;
+    }
+  }
 }
 
 
