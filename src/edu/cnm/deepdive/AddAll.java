@@ -1084,12 +1084,47 @@ public class AddAll {
   public static String maskify(String str) {
     if (str.isEmpty()) {
       return "";
+    } else if(str.length() <= 3) {
+      return str;
     } else {
       String str2 = str.substring(0, str.length()-4);
-      String str3 = str.replace(str2, "#");
-      return str3;
+      int n = str2.length();
+      String str3 = "#";
+      str2=str2.replaceAll(".", str3);
+      String str4 = str.substring(str.length()-4, str.length());
+      return str2 + str4;
     }
   }
+
+//  public int maxSpan(int[] nums) {
+//    if (nums.length == 0)
+//      return 0;
+//    int span = 1;
+//    for (int i = 0; i < nums.length; i++) {
+//      int tempSpan = 1;
+//      boolean valid = false;
+//      int mark = nums[0];
+//
+//      if(nums[i] != mark) {
+//        tempSpan += 1;
+//      }
+//      if (nums[i] == mark) {
+//        tempSpan += 1;
+//        valid = true;
+//      }
+//      if (tempSpan>span && valid) {
+//        span = tempSpan;
+//      }
+//    }
+//    return span;
+//  }
+//
+//  public int maxSpan(int[] nums) {
+//    if (nums.length == 0)
+//      return 0;
+//    String numbers = nums.toString();
+//
+//  }
 }
 
 
