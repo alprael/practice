@@ -1088,7 +1088,6 @@ public class AddAll {
       return str;
     } else {
       String str2 = str.substring(0, str.length()-4);
-      int n = str2.length();
       String str3 = "#";
       str2=str2.replaceAll(".", str3);
       String str4 = str.substring(str.length()-4, str.length());
@@ -1125,6 +1124,16 @@ public class AddAll {
 //    String numbers = nums.toString();
 //
 //  }
+
+  public static boolean groupCheck(String s){
+    if (s.isEmpty())
+      return true;
+
+    if (s.length()%2 != 0)
+      return false;
+
+    return true;
+  }
 }
 
 
