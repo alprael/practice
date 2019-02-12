@@ -1,11 +1,12 @@
 package edu.cnm.deepdive;
 
 
-import java.awt.List;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -1125,14 +1126,50 @@ public class AddAll {
 //
 //  }
 
-  public static boolean groupCheck(String s){
-    if (s.isEmpty())
-      return true;
+  static int cubeOdd(int[] arr) {
+    ArrayList<Integer> list = new ArrayList<>();
+    for (int i : arr) {
+      if (i % 2 != 0) {
+        int cube = (int) Math.pow(i, 3);
+        list.add(cube);
+      }
+    }
+    return list.stream().mapToInt(Integer::intValue).sum();
+  }
 
-    if (s.length()%2 != 0)
-      return false;
+  static String toJadenCase(String phrase) {
+    if (phrase.equals(""))
+      return null;
 
-    return true;
+    String s = phrase.toUpperCase(Locale.ENGLISH);
+
+    return s;
+  }
+
+  public static long toMilesPerHour(double kilometersPerHour) {
+    if (kilometersPerHour < 1)
+      return -1;
+    double formula = 1.609;
+    double miles = kilometersPerHour/formula;
+    return Math.round(miles);
+  }
+
+  public static String repeatSeparator(String word, String sep, int count) {
+    StringBuilder builder = new StringBuilder();
+    if(count==0)
+      return "";
+    if(count==1)
+      return word;
+    if(count>1) {
+      while(count!=0){
+        builder.append(word);
+        count--;
+        if(count==0)
+          break;
+        builder.append(sep);
+      }
+    }
+    return builder.toString();
   }
 }
 

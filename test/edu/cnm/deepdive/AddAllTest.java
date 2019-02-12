@@ -31,4 +31,41 @@ class AddAllTest {
       assertEquals("##ippy",                                    AddAll.maskify("Skippy")                                  );
       assertEquals("####################################man!",  AddAll.maskify("Nananananananananananananananana Batman!"));
     }
+
+  @Test
+  void testSomething() {
+
+    assertEquals(0, AddAll.cubeOdd(new int[] {-5, -5, 5, 5}));
+    assertEquals(28, AddAll.cubeOdd(new int[] {1, 2, 3, 4}));
+    assertEquals(0, AddAll.cubeOdd(new int[] {-3, -2, 2, 3}));
+
+  }
+
+  @Test
+  void test() {
+    assertEquals("Most Trees Are Blue", AddAll.toJadenCase("most trees are blue"));
+  }
+
+  @Test
+  void testNullArg() {
+    assertNull("Must return null when the arg is null", AddAll.toJadenCase(null));
+  }
+
+  @Test
+  void testEmptyArg() {
+    assertNull("Must return null when the arg is empty string", AddAll.toJadenCase(""));
+  }
+
+  @Test
+  void toMilesPerHour() {
+    assertEquals(6, AddAll.toMilesPerHour(10.25));
+    assertEquals(-1, AddAll.toMilesPerHour(-5.6));
+  }
+
+  @Test
+  void repeatSeparator() {
+    assertEquals("ABABABABA", AddAll.repeatSeparator("A", "B", 5));
+    assertEquals("ThisAndThis", AddAll.repeatSeparator("This", "And", 2));
+    assertEquals("MeAndMeAndMe", AddAll.repeatSeparator("Me", "And", 3));
+  }
 }
