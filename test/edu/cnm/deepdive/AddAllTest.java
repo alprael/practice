@@ -67,5 +67,7 @@ class AddAllTest {
     assertEquals("ABABABABA", AddAll.repeatSeparator("A", "B", 5));
     assertEquals("ThisAndThis", AddAll.repeatSeparator("This", "And", 2));
     assertEquals("MeAndMeAndMe", AddAll.repeatSeparator("Me", "And", 3));
+    assertEquals("", AddAll.repeatSeparator("Me", "And", 0));
+    assertEquals("Me", AddAll.repeatSeparator("Me", "And", 1));
   }
 }

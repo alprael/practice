@@ -1156,11 +1156,8 @@ public class AddAll {
 
   public static String repeatSeparator(String word, String sep, int count) {
     StringBuilder builder = new StringBuilder();
-    if(count==0)
-      return "";
-    if(count==1)
-      return word;
-    if(count>1) {
+
+    if(count>=1) {
       while(count!=0){
         builder.append(word);
         count--;
