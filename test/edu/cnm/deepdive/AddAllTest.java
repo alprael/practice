@@ -70,4 +70,14 @@ class AddAllTest {
     assertEquals("", AddAll.repeatSeparator("Me", "And", 0));
     assertEquals("Me", AddAll.repeatSeparator("Me", "And", 1));
   }
+
+  @Test
+  void stringE() {
+    assertTrue(AddAll.StringE("Hello"));
+  }
+
+  @Test
+  void stringTimes() {
+    assertEquals("HiHi", AddAll.stringTimes("Hi", 2));
+  }
 }
