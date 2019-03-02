@@ -80,4 +80,14 @@ class AddAllTest {
   void stringTimes() {
     assertEquals("HiHi", AddAll.stringTimes("Hi", 2));
   }
+
+  @Test
+  void reverse() {
+    assertEquals("gnihtemos", AddAll.reverse("something"));
+  }
+
+  @Test
+  void reverseToo() {
+    assertEquals("gnihtemos", AddAll.reverseToo("something"));
+  }
 }

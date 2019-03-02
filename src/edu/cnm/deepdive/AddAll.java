@@ -199,6 +199,20 @@ public class AddAll {
     }
     return builder.toString();
   }
+
+  public static String reverse(String str) {
+    StringBuilder builder = new StringBuilder();
+    for (int i = str.length()-1; i > -1; --i){
+      builder.append(str.charAt(i));
+    }
+    return builder.toString();
+  }
+
+  public static String reverseToo(String str) {
+    StringBuilder builder = new StringBuilder();
+    return builder.append(str).reverse().toString();
+  }
+
 }
 
 
